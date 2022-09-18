@@ -38,32 +38,3 @@ span#heart {
   font-weight: bolder;
   word-wrap: break-word;
 }
-
-.proposal-button {
-  padding: 1em;
-  font-size: large;
-  font-weight: bolder;
-  border-radius: 12px;
-  opacity: 0.6;
-}
-
-.proposal-button:hover {
-  opacity: 0.8;
-}
-
-.proposal-button:active {
-  opacity: 1;
-}
-
-#proposal-yes {
-  background-color: var(--success);
-}
-
-#proposal-no {
-  background-color: var(--danger);
-  height: 61px;
-  width: 80px;
-  /* position: absolute;
-  left: 0px;
-  top: 0px; */
-}
