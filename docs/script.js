@@ -145,13 +145,8 @@ async function dvd(element) {
     if (invertX) { x += AMOUNT } else { x -= AMOUNT }
     if (invertY) { y += AMOUNT } else { y -= AMOUNT }
 
-    if (x >= maxX || x <= 0) {
-      invertX = !invertX;
-    }
-
-    if (y >= maxY || y <= 0) {
-      invertY = !invertY;
-    }
+    if (x >= maxX || x <= 0) { invertX = !invertX; }
+    if (y >= maxY || y <= 0) { invertY = !invertY; }
 
     await wait(TIMEOUT);
   }
