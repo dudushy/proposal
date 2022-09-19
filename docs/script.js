@@ -3,6 +3,10 @@ console.log("[proposal] init");
 var height = window.innerHeight;
 var width = window.innerWidth;
 
+var count = 0;
+const spanCount = document.getElementById("count-span");
+console.log(spanCount);
+
 console.log("[proposal] height", height);
 console.log("[proposal] width", width);
 
@@ -14,20 +18,29 @@ window.onresize = function () {
   console.log("[proposal#onresize] width", width);
 }
 
-const ButtonYes = document.getElementById("proposal-yes");
-ButtonYes.addEventListener("click", () => {
-  location.href = "yes/index.html"
+const buttonYes = document.getElementById("proposal-yes");
+buttonYes.addEventListener("click", () => {
+  location.href = "yes/"
 })
 
-const ButtonNo = document.getElementById("proposal-no");
-ButtonNo.addEventListener("click", () => {
+const buttonNo = document.getElementById("proposal-no");
+buttonNo.addEventListener("click", () => {
   console.log("[proposal#click] height", height);
   console.log("[proposal#click] width", width);
 
   const randomHeight = Math.floor(Math.random() * (height - 61) + 0);
-  const randomWidth = Math.floor(Math.random() * (width - 80) + 0);;
+  const randomWidth = Math.floor(Math.random() * (width - 80) + 0);
+  console.log("[proposal#click] randomHeight", randomHeight);
+  console.log("[proposal#click] randomWidth", randomWidth);
 
-  ButtonNo.style.position = "absolute";
-  ButtonNo.style.top = `${randomHeight}px`; //? height
-  ButtonNo.style.left = `${randomWidth}px`; //? width
+  buttonNo.style.position = "absolute";
+  buttonNo.style.top = `${randomHeight}px`; //? height
+  buttonNo.style.left = `${randomWidth}px`; //? width
+
+  count++;
+  if (count < 10) {
+    spanCount.textContent = `0${count}`;
+  } else {
+    spanCount.textContent = count;
+  }
 })
