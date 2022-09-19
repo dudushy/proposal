@@ -44,6 +44,7 @@ function setupVars() {
   buttonNo.addEventListener("click", triggerNo);
   console.log(`[${PREFIX}#setupVars] buttonNo`, buttonNo);
 }
+
 function updateDENY_MODE(mode) {
   DENY_MODE = mode;
   console.log(`[${PREFIX}#updateDENY_MODE] DENY_MODE`, DENY_MODE);
