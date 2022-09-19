@@ -17,7 +17,7 @@ const buttonYes = document.getElementById("proposal-yes");
 const buttonNo = document.getElementById("proposal-no");
 
 //! Main
-setupVars();
+setup();
 
 //* Functions
 function wait(ms) {
@@ -30,19 +30,19 @@ function wait(ms) {
   });
 }
 
-function setupVars() {
-  console.log(`[${PREFIX}#setupVars]`);
+function setup() {
+  console.log(`[${PREFIX}#setup]`);
 
-  console.log(`[${PREFIX}#setupVars] spanCount`, spanCount);
+  console.log(`[${PREFIX}#setup] spanCount`, spanCount);
 
   selectMode.addEventListener("input", function() { updateDENY_MODE(selectMode.value) });
-  console.log(`[${PREFIX}#setupVars] buttonYes`, buttonYes);
+  console.log(`[${PREFIX}#setup] buttonYes`, buttonYes);
 
   buttonYes.addEventListener("click", triggerYes);
-  console.log(`[${PREFIX}#setupVars] buttonYes`, buttonYes);
+  console.log(`[${PREFIX}#setup] buttonYes`, buttonYes);
 
   buttonNo.addEventListener("click", triggerNo);
-  console.log(`[${PREFIX}#setupVars] buttonNo`, buttonNo);
+  console.log(`[${PREFIX}#setup] buttonNo`, buttonNo);
 }
 
 function updateDENY_MODE(mode) {
