@@ -111,7 +111,7 @@ function randomContent(element) {
   console.log(`[${PREFIX}#randomContent] randomX`, randomX);
   console.log(`[${PREFIX}#randomContent] randomY`, randomY);
 
-  element.style.position = "relative";
+  element.style.position = "absolute";
   element.style.left = `${randomX}px`;
   element.style.top = `${randomY}px`;
   element.style.transition = "none";
